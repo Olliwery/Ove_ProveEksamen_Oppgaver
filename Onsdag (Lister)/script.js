@@ -1,5 +1,14 @@
 let tall = [0, 10, 100, 1000, 10000, 100000]
 let henteTallEL = document.getElementById("henteTall")
+let visListeEL = document.getElementById("visListe")
+let text = ""
+
+for (let i = 0; i < tall.length; i++) {
+    text += tall[i] + " - "
+
+}
+visListeEL.innerText = text
+
 
 henteTallEL.addEventListener("change", oppgave1)
 
@@ -12,19 +21,26 @@ function oppgave1() {
 }
 
 
+/*fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff*/
 
 
 
-
-let arrayListe = [0, 10, 100, 1000, 10000, 100000]
 let velgeTallEL = document.getElementById("velgeTall")
+let endreTallEL = document.getElementById("endreTall")
 
-velgeTallEL.addEventListener("change", oppgave1)
+velgeTallEL.addEventListener("change", velgeTall)
+endreTallEL.addEventListener("change", endreTall)
+
 
 let SeTallEL = document.getElementById("SeTall")
 
 
-function oppgave1() {
-    SeTallEL.innerText = (arrayListe[velgeTallEL.value])
+function velgeTall() {
+    
+}
+
+function endreTall() {
+    velgeTall.value
+    SeTallEL.innerText = (tall[velgeTallEL.value])
     velgeTallEL.value = ""
 }
